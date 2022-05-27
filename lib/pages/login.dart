@@ -42,8 +42,10 @@ class _BottonSignIn extends StatelessWidget {
       child: TextButton(
         child:
             const TextFrave(text: 'INICIAR', color: Colors.white, fontSize: 18),
-        onPressed: () => Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => NavBar())),
+        onPressed: () => {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (_) => NavBar()))
+        },
       ),
     );
   }
@@ -135,7 +137,7 @@ class _EmailAndPassword extends StatelessWidget {
           TextFieldCustom(
               icono: Icons.mail_outline,
               type: TextInputType.emailAddress,
-              texto: ' Correo Electronico'),
+              texto: ' Correo Electronico',),
           const SizedBox(height: 20),
           TextFieldCustom(
               icono: Icons.visibility_off,
